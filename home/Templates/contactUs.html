@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} 
+Contact Us
+{% endblock title %} 
+
+{% block content %}
+
+<div id="form">
+    <h1 class=" text-center mt-5 mb-5  ">Contact US</h1>
+    
+<form method="post" action="/contactUs" name="myForm" >
+    {% csrf_token %}
+
+    <div class=" d-flex justify-content-center ps-2 ">
+
+    <div>
+    <label class="form" for="name">Name:</label>
+    <input class="form" type="text" name="fname" placeholder="First Name" id="name" >
+    <input class="form" type="text" name="lname" placeholder="Last name" id="lname">
+    <br>
+    </div>
+
+    <div>
+    <label class="form" for="email">E-MAIL:</label>
+    <input class="form" type="email" name="email" placeholder="Enter E-MAIL Address" id="email" > <br>
+    </div>
+    </div>
+
+    <div style="height:100px; margin-left: 23.5% ; margin-top: 10px; " class=" d-flex">
+    <label class="form" for="pass">Tell Your Problem:</label>
+    <input class="form" type="text" name="password" id="pass" placeholder="Type Here....." style="height:100px; width: 50%; "> <br>
+    </div>
+    <br>
+
+
+    <div class=" d-flex justify-content-center mt-2 ">
+    <button type="submit" id="button" name="submit" class="btn btn-dark">Submit</button>
+    <br>
+    </div>
+</form>
+</div>
+
+
+{% endblock content %}
